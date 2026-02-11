@@ -1,20 +1,20 @@
-package com.javaweb.repository.custom.entity;
+package com.javaweb.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-@Table(name = "renttype")
-public class RentTypeEntity {
+@Table(name = "transactiontype")
+public class TransactionTypeEntity extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @Column(name = "code")
-  private String code;
-
   @Column(name = "name")
   private String name;
+
+  @Column(name = "code")
+  private String code;
 }

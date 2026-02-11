@@ -1,4 +1,4 @@
-package com.javaweb.repository.custom.entity;
+package com.javaweb.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

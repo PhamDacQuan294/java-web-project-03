@@ -1,22 +1,25 @@
-package com.javaweb.repository.custom.entity;
+package com.javaweb.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Getter @Setter @NoArgsConstructor
 @Entity
-@Table(name = "assignmentcustomer")
-public class AssignmentCustomerEntity extends BaseEntity {
+@Table(name = "transaction")
+public class TransactionEntity extends BaseEntity {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "staffid")
-  private UserEntity staff;
+  @Column(name = "note")
+  private String note;
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "customerid")
   private CustomerEntity customer;
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "type")
+  private TransactionTypeEntity transactionType;
 }
