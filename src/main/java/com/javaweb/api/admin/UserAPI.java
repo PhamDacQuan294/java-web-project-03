@@ -5,8 +5,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserAPI {
-  @GetMapping("/test")
-  public String testAPI() {
-    return "success";
-  }
+
 }
