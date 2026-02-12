@@ -89,6 +89,13 @@
       <scope>test</scope>
     </dependency>
 
+    <!--template sitemesh decorator-->
+    <dependency>
+      <groupId>org.sitemesh</groupId>
+      <artifactId>sitemesh</artifactId>
+      <version>3.2.2</version>
+    </dependency>
+
   </dependencies>
 
   <build>

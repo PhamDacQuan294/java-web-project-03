@@ -1,0 +1,10 @@
+#navbar.navbar {
+  height: 45px !important;
+  min-height: 45px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#navbar .navbar-container {
+  height: 45px !important;
+}
