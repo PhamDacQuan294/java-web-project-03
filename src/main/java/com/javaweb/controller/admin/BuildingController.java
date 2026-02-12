@@ -1,16 +1,22 @@
 package com.javaweb.controller.admin;
 
-import jakarta.servlet.http.HttpServletRequest;
+import com.javaweb.service.BuildingService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller(value = "buildingControllerOfAdmin")
 public class BuildingController {
-  @RequestMapping(value = "/admin/building-list", method = RequestMethod.GET)
-  public ModelAndView buildingList(HttpServletRequest request) {
+
+  @Autowired
+  private BuildingService buildingService;
+
+  // [GET] /admin/building-list
+  @GetMapping(value = "/admin/buildings")
+  public ModelAndView buildingList() {
     ModelAndView mav = new ModelAndView("admin/building/list");
+    mav.addObject("records", buildingService.index());
     return mav;
   }
 }

@@ -22,7 +22,7 @@ public class BuildingRepositoryImpl implements BuildingRepositoryCustom {
   private String PASS = "123456";
 
   @Override
-  public List<BuildingEntity> findAll(BuildingSearchBuilder buildingSearchBuilder) {
+  public List<BuildingEntity> index(BuildingSearchBuilder buildingSearchBuilder) {
     return List.of();
   }
 }

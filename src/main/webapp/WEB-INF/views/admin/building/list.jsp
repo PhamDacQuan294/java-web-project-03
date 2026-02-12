@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -277,57 +278,67 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td class="center">
-                    <label class="pos-rel">
-                      <input type="checkbox" name="checkList" value="" class="ace">
-                      <span class="lbl"></span>
-                    </label>
-                  </td>
+                <c:forEach var="item" items="${records}">
+                  <tr>
+                    <td class="center">
+                      <label class="pos-rel">
+                        <input type="checkbox" name="checkList" value="" class="ace">
+                        <span class="lbl"></span>
+                      </label>
+                    </td>
 
-                  <td>
-                    <a href="#">ok</a>
-                  </td>
+                    <td>
+                      <a href="#">${item.name}</a>
+                    </td>
 
-                  <td>
-                    <a href="#">ok</a>
-                  </td>
+                    <td>
+                      <a href="#">${item.address}</a>
+                    </td>
 
-                  <td>
-                    <a href="#">ok</a>
-                  </td>
+                    <td>
+                      <a href="#">ok</a>
+                    </td>
 
-                  <td>
-                    <a href="#">ok</a>
-                  </td>
+                    <td>
+                      <a href="#">${item.managerName}</a>
+                    </td>
 
-                  <td>
-                    <a href="#">ace.com</a>
-                  </td>
+                    <td>
+                      <a href="#">${item.managerPhoneNumber}</a>
+                    </td>
 
-                  <td>$45</td>
-                  <td class="hidden-480">3,330</td>
-                  <td>Feb 12</td>
+                    <td>
+                      <a href="#">${item.floorArea}</a>
+                    </td>
 
-                  <td class="hidden-480">
-                    <span class="label label-sm label-warning">Expiring</span>
-                  </td>
 
-                  <td>
-                    <div class="hidden-sm hidden-xs btn-group">
-                      <button class="btn btn-xs btn-success" title="Giao toa nha"></button>
+                    <td class="hidden-480">3,330</td>
 
-                      <a class="btn btn-xs btn-info" title="Sua toa nha"
-                         href="ok">
-                        <i class="ace-icon fa fa-pencil bigger-120"></i>
-                      </a>
+                    <td>
+                      <a href="#">${item.rentArea}</a>
+                    </td>
 
-                      <button class="btn btn-xs btn-danger" title="Xoa toa nha">
-                        <i class="ace-icon fa fa-trash-o bigger-120"></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+                    <td class="hidden-480">
+                      <span class="label label-sm label-warning">Expiring</span>
+                    </td>
+
+                    <td>
+                      <div class="hidden-sm hidden-xs btn-group">
+                        <button class="btn btn-xs btn-success" title="Giao toa nha">
+                          <i class="ace-icon fa fa-pencil bigger-120"></i>
+                        </button>
+
+                        <a class="btn btn-xs btn-info" title="Sua toa nha" href="ok">
+                          <i class="ace-icon fa fa-pencil bigger-120"></i>
+                        </a>
+
+                        <button class="btn btn-xs btn-danger" title="Xoa toa nha">
+                          <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </c:forEach>
                 </tbody>
               </table>
             </div>

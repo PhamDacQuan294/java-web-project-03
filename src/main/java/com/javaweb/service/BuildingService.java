@@ -1,5 +1,9 @@
 package com.javaweb.service;
 
-public interface BuildingService {
+import com.javaweb.model.dto.BuildingDTO;
 
+import java.util.List;
+
+public interface BuildingService {
+  List<BuildingDTO> index();
 }

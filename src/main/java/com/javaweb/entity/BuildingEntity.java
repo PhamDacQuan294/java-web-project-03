@@ -46,6 +46,8 @@ public class BuildingEntity extends BaseEntity {
   @Column(name = "linkofbuilding") private String linkOfBuilding;
   @Column(name = "map") private String map;
   @Column(name = "image") private String image;
+  @Column(name = "managername") private String managerName;
+  @Column(name = "managerphonenumber") private String managerPhoneNumber;
 
   // ===== relations =====
   @OneToMany(mappedBy = "building", fetch = FetchType.LAZY)
