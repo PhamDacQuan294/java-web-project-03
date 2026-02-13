@@ -1,6 +1,7 @@
 package com.javaweb.service;
 
 import com.javaweb.model.dto.BuildingDTO;
+import com.javaweb.model.response.ResponseDTO;
 
 import java.util.List;
 

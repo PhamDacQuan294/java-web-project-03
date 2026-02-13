@@ -1,9 +1,16 @@
 package com.javaweb.api.admin;
 
-//@RestController
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController(value = "buildingAPIOfAdmin")
+@RequestMapping("/api/building")
 public class BuildingAPI {
-//  @GetMapping(value="/api/building")
-//  public List<BuildingDTO> getBuilding(@RequestParam Map<String, Object> params, @RequestParam(name="typeCode", required = false) List<String> typeCode) {
-//    return null;
-//  }
+
+  @GetMapping("/{id}/staffs")
+  public void loadStaffs() {
+
+  }
+
 }

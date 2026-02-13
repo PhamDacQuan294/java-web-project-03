@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BuildingDTO {
+public class BuildingDTO extends AbstractDTO{
   private String name;
   private String address;
   private String managerName;
